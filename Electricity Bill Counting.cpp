@@ -2,36 +2,36 @@
 //
 
 #include <iostream>
-#include <iomanip>
+using namespace std;
 
 int main() {
 
     double Units, Bill;
     int Fixedcharge = 110;
-    std::cout << std::fixed;
-    std::cout << std::setprecision(2);
+    cout.setf(ios::fixed);
+    cout.precision(2);
 
-    std::cout << " Enter your units " << std::endl;
-    std::cin >> Units;
+    cout << " Enter your units " <<endl;
+    cin >> Units;
 
     if (Units <= 150) {
         Bill = Units + 5.50 + Fixedcharge;
-        std::cout << "Your monthly bill is equal to R" << Bill;
+        cout << "Your monthly bill is equal to R" << Bill;
 
     }
     else if (Units >150  <=300) {
         Bill = Fixedcharge + (150 * 5.50) + (Units - 150) * 6.50;
-        std::cout << " Your monthly bill is equal to R" << Bill;
+        cout << " Your monthly bill is equal to R" << Bill;
 
     }
     else if (Units > 300  <=500) {
         Bill = Fixedcharge + (150 * 5.50) + (150 * 6) + (Units - 300) * 6.50;
-        std::cout << " Your monthly bill is equal to R" << Bill;
+        cout << " Your monthly bill is equal to R" << Bill;
 
     }
     else if (Units > 500) {
         Bill = Fixedcharge + (150 * 5.50) + (150 * 6.50) + (200 * 6.50) + (Units - 500) * 7;
-       std:: cout << "Your monthly bill is equal to R" << Bill;
+        cout << "Your monthly bill is equal to R" << Bill;
     }
 
     return 0;
